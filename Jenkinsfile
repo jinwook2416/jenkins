@@ -9,7 +9,7 @@ pipeline {
     stage('build docker image') {
       steps {
         sh '''
-        docker build -t dlwlsdnr24/ktcloudinfra4:0727
+        docker build -t dlwlsdnr24/ktcloudinfra4:0727 .
         docker bush dlwlsdnr24/ktcloudinfra4:0727
         '''
       }
