@@ -6,6 +6,13 @@ pipeline {
         git url: 'https://github.com/beomtaek78/ktcloudinfrajenkins.git', branch: 'main'
       }
     }
+    stage('build docker image') {
+      steps {
+        sh '''
+        docker build -t dlwlsdnr24/ktcloudinfra4:0727
+        '''
+      }
+    }
     stage('delivery and deployment using k8s') {
       steps {
         sh '''
